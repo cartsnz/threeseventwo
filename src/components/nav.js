@@ -1,6 +1,7 @@
 import * as React from 'react'
 import NavStyles from './styles/nav';
 import NavItem from './navItem';
+import HeaderLogo from './headerLogo';
 
 const Nav = () => {
   return(
@@ -14,6 +15,9 @@ const Nav = () => {
       </li>
       <li>
        <NavItem title="Menus" route="/menu" />
+      </li>
+      <li>
+        <HeaderLogo title="ThreeSevenTwo" route="/" />
       </li>
       <li>
        <NavItem title="Book" route="/book" />

@@ -35,6 +35,31 @@ const GlobalStyle = createGlobalStyle`
   #root, #___gatsby {
     isolation: isolate;
   }
+
+  /* Fonts */
+  @font-face {
+    font-family: "Barlow";
+    src: url('../fonts/Barlow-Medium.ttf');
+  }
+
+  body {
+    font-family: "Barlow", sans-serif;
+    font-weight: normal;
+    word-wrap: break-word;
+  }
+
+  /* Global styles */
+  .container {
+    padding: 0 30px;
+  }
+
+  .medium-up--hide {
+    @media (min-width: ${({theme}) => theme.mobile}) {
+      display: none;
+    }
+  }
+
+
 `
 
 export default GlobalStyle;

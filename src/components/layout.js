@@ -19,7 +19,7 @@ const Layout = ({pageTitle, children}) => {
       <GlobalStyle />
       <title>{pageTitle}</title>
       <Header open={open} setOpen={setOpen} node={node} />
-      <main>
+      <main className='container'>
         {children}
       </main>
       <h1>Footer goes here</h1>

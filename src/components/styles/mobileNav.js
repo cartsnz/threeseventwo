@@ -16,10 +16,6 @@ const MobileNavStyles = styled.button`
   padding: 0;
   z-index: 10;
 
-  @media (min-width: ${({theme}) => theme.mobile}) {
-    display: none;
-  }
-
   &:focus {
     outline: none;
   }

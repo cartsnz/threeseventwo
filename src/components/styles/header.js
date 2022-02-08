@@ -5,7 +5,14 @@ const HeaderStyles = styled.header`
   color: ${({theme}) => theme.primaryDark};
   display: flex;
   justify-content: space-around;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
+  width: 100%;
+
+  position: ${props => props.scrolled ? "fixed" : "static"};
+  top: 0;
+  left: 0;
+  background-color: #fff;
+
 `
 
 export default HeaderStyles;

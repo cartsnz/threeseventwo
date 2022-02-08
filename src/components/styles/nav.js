@@ -9,6 +9,8 @@ const NavStyles = styled.nav`
   }
 
   ul {
+    display: flex;
+    align-items: center;
     list-style: none;
     padding: 0;
   }
