@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { device } from "../../lib/sizes";
+import { theme } from "../../lib/theme";
 
 const MobileNavStyles = styled.button`
   position: absolute;
@@ -16,7 +16,7 @@ const MobileNavStyles = styled.button`
   padding: 0;
   z-index: 10;
 
-  @media ${device.tablet} {
+  @media (min-width: ${({theme}) => theme.mobile}) {
     display: none;
   }
 
@@ -27,7 +27,7 @@ const MobileNavStyles = styled.button`
   div {
     width: 2rem;
     height: 0.25rem;
-    background-color: ${({ open }) => open ? '#fff' : '#000'};
+    background-color: ${({ open }) => open ? theme.primaryLight : theme.primaryDark};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;

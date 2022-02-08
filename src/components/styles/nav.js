@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import { device } from "../../lib/sizes";
 
 const NavStyles = styled.nav`
   display: none;
 
-  @media ${device.tablet} {
+  @media (min-width: ${({theme}) => theme.mobile}) {
     display: flex;
     align-items: center;
   }
@@ -21,11 +20,12 @@ const NavStyles = styled.nav`
 
   a {
     text-decoration: none;
-    color: var(--color-primary);
+    color: ${({theme}) => theme.primaryDark};
   }
 
   a:hover {
     text-decoration: underline;
+    color: ${({theme}) => theme.primaryHover};
   }
 `
 

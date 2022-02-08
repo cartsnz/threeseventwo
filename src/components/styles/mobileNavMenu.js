@@ -1,11 +1,10 @@
 import styled from "styled-components";
-import { device } from "../../lib/sizes";
 
 const MobileNavMenuStyles = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background: var(--color-primary);
+  background: ${({theme}) => theme.primaryDark};
   height: 100vh;
   text-align: left;
   padding: 4rem 2rem 2rem;
@@ -20,11 +19,11 @@ const MobileNavMenuStyles = styled.nav`
     padding: 1rem 0;
     font-weight: bold;
     letter-spacing: 0.5rem;
-    color: #fff;
+    color: ${({theme}) => theme.primaryLight};
     text-decoration: none;
     transition: color 0.3s linear;
 
-    @media (max-width: var(--mobile-width)) {
+    @media (max-width: ${({theme}) => theme.mobile}) {
       font-size: 1.5rem;
       text-align: center;
     }

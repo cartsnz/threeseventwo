@@ -35,14 +35,6 @@ const GlobalStyle = createGlobalStyle`
   #root, #___gatsby {
     isolation: isolate;
   }
-
-  /* CSS VARIABLES */
-  :root {
-    --color-primary: #3e5589;
-    --px1: 1rem;
-    --px2: 2rem;
-    --mobile-width: 576px;
-  }
 `
 
 export default GlobalStyle;

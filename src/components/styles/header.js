@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 const HeaderStyles = styled.header`
-  border-bottom: 1px solid var(--color-primary);
-  color: var(--color-primary);
+  border-bottom: 1px solid ${({theme}) => theme.primaryDark};
+  color: ${({theme}) => theme.primaryDark};
   display: flex;
   justify-content: space-around;
-  padding: var(--px2) var(--px1);
+  padding: 2rem 1rem;
 `
 
 export default HeaderStyles;
