@@ -49,8 +49,15 @@ const GlobalStyle = createGlobalStyle`
   }
 
   /* Global styles */
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
   .container {
-    padding: 0 30px;
+    padding: 0 30px 30px;
+    margin-top: 110px;
+    flex: 1 0 auto;
   }
 
   .medium-up--hide {

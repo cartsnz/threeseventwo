@@ -7,7 +7,7 @@ const HeaderLogo = ({ title, route }) => {
   return (
     <HeaderLogoStyles>
       <Link to={route}>
-        <PlaceholderImage height='75px' width='150px' color='#176bd1'/>
+        <PlaceholderImage height='75px' width='150px' color='#3d5588'/>
       </Link>
     </HeaderLogoStyles>
   )
