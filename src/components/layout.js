@@ -9,7 +9,6 @@ import { useOnClickOutside } from '../lib/hooks';
 const Layout = ({pageTitle, children}) => {
 
   const [open, setOpen] = useState(false);
-
   const node = useRef();
   useOnClickOutside(node, () => setOpen(false));
 

@@ -26,12 +26,14 @@ const Header = ({ open, setOpen, node }) => {
 
   return (
     <HeaderStyles scrolled={scrolled}>
-      <div ref={node} className='medium-up--hide'>
-        <MobileNav open={open} setOpen={setOpen} />
-        <MobileNavMenu open={open} />
-      </div>
       <div className='medium-up--hide'>
-        <HeaderLogo route="/" title="Three Seven Two" />
+        <div ref={node}>
+          <MobileNav open={open} setOpen={setOpen} />
+          <MobileNavMenu open={open} />
+        </div>
+        <div>
+          <HeaderLogo route="/" title="Three Seven Two" />
+        </div>
       </div>
       <Nav />
     </HeaderStyles>
