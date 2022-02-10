@@ -54,6 +54,10 @@ const GlobalStyle = createGlobalStyle`
     flex-direction: column;
   }
 
+  .overflow-hidden {
+    overflow: hidden;
+  }
+
   .container {
     padding: 0 30px 30px;
     margin-top: 110px;
@@ -66,6 +70,30 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    background: ${({theme}) => theme.primaryDark};
+    height: 100vh;
+  }
+
+  .refresh {
+    padding: 10px;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    width: 20px;
+    height: 20px;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
 
 `
 
