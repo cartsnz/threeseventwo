@@ -6,6 +6,7 @@ import MobileNav from './mobileNav';
 import MobileNavMenu from './mobileNavMenu';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { useHeaderScroll } from '../lib/hooks';
 
 const variants = {
   visible: { opacity: 1, y: 0 },
@@ -14,27 +15,12 @@ const variants = {
 
 const Header = ({ isOpen, toggleOpen, containerRef, height}) => {
 
-  const [scrolled, setScrolled] = useState(false);
-
-  let prevScroll = window.scrollY;
-  console.log("prevScroll: " + prevScroll);
-
-  const handleScroll = () => {
-    const currScroll = window.scrollY;
-    console.log("currScroll: " + currScroll);
-    const isScrolled = prevScroll < currScroll;
-    setScrolled(isScrolled);
-    prevScroll = currScroll;
-  }
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
-  })
+  const scrolled = useHeaderScroll();
 
   // TODO - Sort out html structure of this
 
   return (
-    <HeaderStyles scrolled={scrolled}
+    <HeaderStyles
       initial="visible"
       animate={scrolled ? "hidden" : "visible"}
       variants={variants}
@@ -43,7 +29,7 @@ const Header = ({ isOpen, toggleOpen, containerRef, height}) => {
         ease: "easeInOut"
       }}>
       <MobileNav isOpen={isOpen} toggleOpen={toggleOpen} containerRef={containerRef} height={height} />  
-      <HeaderLogo route="/" title="Three Seven Two" />
+      <HeaderLogo route="/" title="Three Seven Two" type="mobile" />
       <Nav />
     </HeaderStyles>
   )

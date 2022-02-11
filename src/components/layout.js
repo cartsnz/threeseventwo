@@ -12,16 +12,18 @@ import { useDimensions } from '../lib/use-dimensions';
 
 const Layout = ({pageTitle, children}) => {
 
-  // Pop these into custom hook
-
-  // const [open, setOpen] = useState(false);
-  // const node = useRef();
-  // useOnClickOutside(node, () => setOpen(false));
-
-  // Pop these into custom Hook
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
+
+  // When navigating to new page, if menu isn't open (which it shouldn't be) then remove the overflow-hidden class
+  if (isOpen) {
+    document.querySelector('body').classList.add('overflow-hidden');
+    //document.querySelector('main').classList.remove('relative');
+  } else {
+    document.querySelector('body').classList.remove('overflow-hidden');
+    //document.querySelector('main').classList.add('relative');
+  }
 
   return (
     <ThemeProvider theme={theme}>

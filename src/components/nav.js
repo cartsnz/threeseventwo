@@ -17,7 +17,7 @@ const Nav = () => {
        <NavItem title="Menus" route="/menu" />
       </li>
       <li>
-        <HeaderLogo title="ThreeSevenTwo" route="/" />
+        <HeaderLogo title="ThreeSevenTwo" route="/" type="device" />
       </li>
       <li>
        <NavItem title="Book" route="/book" />
