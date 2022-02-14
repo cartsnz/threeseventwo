@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const NavStyles = styled.nav`
+const Nav = styled.nav`
   display: none;
 
   @media (min-width: ${({theme}) => theme.mobile}) {
@@ -31,4 +31,4 @@ const NavStyles = styled.nav`
   }
 `
 
-export default NavStyles;
+export default Nav;

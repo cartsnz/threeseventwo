@@ -11,8 +11,10 @@ const Path = props => (
     />
 );
 
-// TODO - Adjust color of button based on if the item is open or not
-// Pass isOpen as a prop into PATH and adjust stroke based on that
+/* TODO 
+ - Adjust color of button based on if the item is open or not
+ - Pass isOpen as a prop into PATH and adjust stroke based on that
+*/
 
 export const MenuToggle =({ toggle }) => {
   return (

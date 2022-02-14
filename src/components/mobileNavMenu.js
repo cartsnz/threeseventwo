@@ -1,7 +1,12 @@
 import * as React from 'react';
-import { MobileNavItem } from './mobileNavItem';
-import NavItem from './navItem';
-import MobileNavMenuStyles from './styles/mobileNavMenu';
+import  MobileNavItem from './mobileNavItem';
+import MobileNavMenu from './styles/mobileNavMenu';
+
+/* TODO
+ - Move mobileNavLinks array into separate util file
+ - Add social links below menu items
+ - Tidy up animation (timing)
+*/
 
 const variants = {
   open: {
@@ -12,7 +17,6 @@ const variants = {
   }
 };
 
-// TODO - Replicate for desktop nav and move into separate lib file
 const mobileNavLinks = [
   {
     title: "Home",
@@ -40,16 +44,14 @@ const mobileNavLinks = [
   }
 ];
 
-// TODO - Add social links below menu items
-
-const MobileNavMenu = () => {
+const MobileNavMenuComponent = () => {
   return(
-    <MobileNavMenuStyles variants={variants}>
+    <MobileNavMenu variants={variants}>
       {mobileNavLinks.map(link => (
         <MobileNavItem link={link} key={link.title} />
       ))}
-    </MobileNavMenuStyles>
+    </MobileNavMenu>
   )
 }
 
-export default MobileNavMenu;
+export default MobileNavMenuComponent;

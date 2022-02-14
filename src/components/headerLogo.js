@@ -3,6 +3,10 @@ import { Link } from 'gatsby'
 import HeaderLogoStyles from './styles/headerLogo'
 import PlaceholderImage from './placeholderImage'
 
+/* TODO
+ - Bring in image to use as logo
+*/
+
 const HeaderLogo = ({ title, route, type }) => {
   return (
     <HeaderLogoStyles className={type == 'mobile' ? 'medium-up--hide' : ''}>

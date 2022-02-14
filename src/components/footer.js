@@ -1,9 +1,14 @@
 import * as React from 'react';
-import FooterStyles from './styles/footer';
+import Footer from './styles/footer';
 
-const Footer = () => {
+/* TODO
+ - Update styling for footer
+ - Add light animations to text content
+*/
+
+const FooterComponent = () => {
   return (
-    <FooterStyles>
+    <Footer>
       <div className='footer-left'>
         <h2>Business Name</h2>
         <p>Address</p>
@@ -16,8 +21,8 @@ const Footer = () => {
         <p>Bookings recommended</p>
         <p>Email link</p>
       </div>
-    </FooterStyles>
+    </Footer>
   )
 }
 
-export default Footer;
+export default FooterComponent;

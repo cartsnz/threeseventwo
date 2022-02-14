@@ -1,11 +1,16 @@
 import * as React from 'react'
-import NavStyles from './styles/nav';
+import Nav from './styles/nav';
 import NavItem from './navItem';
 import HeaderLogo from './headerLogo';
 
-const Nav = () => {
+/* TODO
+ - Use array of list items from util file
+ - Slice into two and add logo in center
+*/
+
+const NavComponent = () => {
   return(
-    <NavStyles>
+    <Nav>
     <ul>
       <li>
        <NavItem title="Home" route="/" />
@@ -29,8 +34,8 @@ const Nav = () => {
        <NavItem title="Gift Vouchers" route="/gifts" />
       </li>
     </ul>
-    </NavStyles>
+    </Nav>
   )
 }
 
-export default Nav;
+export default NavComponent;

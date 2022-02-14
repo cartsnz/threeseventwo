@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const FooterStyles = styled.footer`
+const Footer = styled.footer`
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
@@ -19,4 +19,4 @@ const FooterStyles = styled.footer`
   }
 `
 
-export default FooterStyles;
+export default Footer;

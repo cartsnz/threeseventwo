@@ -19,9 +19,7 @@ const variants = {
   }
 };
 
-// TODO - Add link within li with title and route
-
-export const MobileNavItem =({ link }) => {
+const MobileNavItem =({ link }) => {
   return (
     <motion.li
       variants={variants}
@@ -32,3 +30,5 @@ export const MobileNavItem =({ link }) => {
     </motion.li>
   )
 };
+
+export default MobileNavItem;

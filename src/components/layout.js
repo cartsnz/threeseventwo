@@ -1,14 +1,21 @@
 import * as React from 'react';
 import Header from './header';
-import MobileNav from './mobileNav';
 import Footer from './footer';
 import GlobalStyle from './styles/globalStyles';
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../lib/theme';
-import { useState, useRef } from 'react';
+import { useRef } from 'react';
 import { useOnClickOutside } from '../lib/hooks';
 import { motion, useCycle } from 'framer-motion';
 import { useDimensions } from '../lib/use-dimensions';
+import HeaderComponent from './header';
+
+// TODO:
+// - Work out a way to delay the page transition only on mobile
+// - Potentially add relative class to `main` when mobile menu is open
+// - Look into whether useOnClickOutside needs to be used
+// - Update default styling of main content (spacing etc.)
+// - Sort out fixed/spacing when header is scrolled down
 
 const Layout = ({pageTitle, children}) => {
 
@@ -25,12 +32,36 @@ const Layout = ({pageTitle, children}) => {
     //document.querySelector('main').classList.add('relative');
   }
 
+  const variants = {
+    start: {
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 75,
+        mass: 0.35,
+        duration: 0.3,
+        ease: 'easeInOut',
+      }
+    },
+    end: {
+      opacity: 0,
+      transition: {
+        delay: 0.3,
+        type: "spring",
+        stiffness: 75,
+        mass: 0.35,
+        duration: 0.3,
+        ease: 'easeInOut',
+      }
+    }
+  }
+
   return (
     <ThemeProvider theme={theme}>
     <>
       <GlobalStyle />
       <title>{pageTitle}</title>
-      <Header 
+      <HeaderComponent 
         isOpen={isOpen} 
         toggleOpen={toggleOpen} 
         containerRef={containerRef} 
@@ -38,16 +69,10 @@ const Layout = ({pageTitle, children}) => {
       />
       <motion.main
         key={pageTitle}
-        initial={{opacity: 0}}
-        animate={{opacity: 1}}
-        exit={{opacity: 0}}
-        transition={{
-          type: "spring",
-          stiffness: 75,
-          mass: 0.35,
-          duration: 0.3,
-          ease: 'easeInOut'
-        }}
+        initial="end"
+        animate="start"
+        exit="end"
+        variants={variants}
         className='container'>
         {children}
       </motion.main>
