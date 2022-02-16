@@ -2,6 +2,7 @@ import * as React from 'react';
 import  MobileNavItem from './mobileNavItem';
 import MobileNavMenu from './styles/mobileNavMenu';
 import { navigationItems } from '../lib/navigationItems';
+import { useLockBodyScroll } from '../lib/hooks';
 
 /* TODO
  - Add social links below menu items
@@ -18,6 +19,10 @@ const variants = {
 };
 
 const MobileNavMenuComponent = () => {
+
+  // Lock body scroll when menu is mounted
+  useLockBodyScroll();
+
   return(
     <MobileNavMenu variants={variants}>
       {navigationItems.map(link => (

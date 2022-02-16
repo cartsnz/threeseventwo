@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react';
 
 // Custom hook to handle scroll animation of header
 export const useHeaderScroll = () => {
@@ -20,6 +20,16 @@ export const useHeaderScroll = () => {
   })
 
   return scrolled;
+}
+
+// Custom hook to lock body scroll
+export const useLockBodyScroll = () => {
+  useLayoutEffect(() => {
+    const originalStyle = window.getComputedStyle(document.body).overflow;
+    console.log('component mounting');
+    document.body.style.overflow = "hidden";
+    return () => (document.body.style.overflow = originalStyle);
+  }, []);
 }
 
 // TODO - revisit this later on if needed

@@ -7,6 +7,12 @@ const GiftVoucherPage = () => {
     <Layout pageTitle="Gift Vouchers">
       <p>This is the Gift Vouchers page</p>
       <PlaceholderImage height="500px" width="100%" />
+      <br />
+      <div style={{"display": "flex", "gridGap": "1rem"}}>
+        <PlaceholderImage height="200px" width="100%" />
+        <PlaceholderImage height="200px" width="100%" />
+        <PlaceholderImage height="200px" width="100%" />
+      </div>
     </Layout>
   )
 }

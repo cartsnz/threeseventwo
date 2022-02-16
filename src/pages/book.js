@@ -7,6 +7,12 @@ const BookingPage = () => {
     <Layout pageTitle="Bookings">
       <p>This is the booking page</p>
       <PlaceholderImage width="100%" height="500px" />
+      <br />
+      <div style={{"display": "flex", "gridGap": "1rem"}}>
+        <PlaceholderImage height="200px" width="100%" />
+        <PlaceholderImage height="200px" width="100%" />
+        <PlaceholderImage height="200px" width="100%" />
+      </div>
     </Layout>
   )
 }

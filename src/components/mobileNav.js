@@ -41,7 +41,9 @@ const MobileNav = ({ isOpen, toggleOpen, containerRef, height}) => {
       className="medium-up--hide mobile-nav-spacer"
       >
       <motion.div className='background' variants={sidebar} />
+      {isOpen && (
       <MobileNavMenuComponent />
+      )}
       <MenuToggle toggle={() => toggleOpen()} />
     </motion.nav>
   )

@@ -4,7 +4,7 @@ import GlobalStyle from './styles/globalStyles';
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../lib/theme';
 import { useRef } from 'react';
-import { useOnClickOutside } from '../lib/hooks';
+import { useLockBodyScroll, useOnClickOutside } from '../lib/hooks';
 import { motion, useCycle } from 'framer-motion';
 import { useDimensions } from '../lib/use-dimensions';
 import HeaderComponent from './header';
@@ -21,20 +21,6 @@ const Layout = ({pageTitle, children}) => {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
-
-  // This was causing the build to fal as document is not available during SSR
-  // - Look into another method to handle locking scroll (Geist?)
-  
-  // When navigating to new page, if menu isn't open (which it shouldn't be) then remove the overflow-hidden class
-  /*
-  if (isOpen) {
-    document.querySelector('body').classList.add('overflow-hidden');
-    //document.querySelector('main').classList.remove('relative');
-  } else {
-    document.querySelector('body').classList.remove('overflow-hidden');
-    //document.querySelector('main').classList.add('relative');
-  }
-  */
 
   const variants = {
     start: {

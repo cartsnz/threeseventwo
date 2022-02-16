@@ -12,6 +12,12 @@ const MenuPage = () => {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </div>
       <Menu />
+      <br />
+      <div style={{"display": "flex", "gridGap": "1rem"}}>
+        <PlaceholderImage height="200px" width="100%" />
+        <PlaceholderImage height="200px" width="100%" />
+        <PlaceholderImage height="200px" width="100%" />
+      </div>
     </Layout>
   )
 }
