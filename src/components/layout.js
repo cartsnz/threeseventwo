@@ -22,7 +22,11 @@ const Layout = ({pageTitle, children}) => {
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
 
+  // This was causing the build to fal as document is not available during SSR
+  // - Look into another method to handle locking scroll (Geist?)
+  
   // When navigating to new page, if menu isn't open (which it shouldn't be) then remove the overflow-hidden class
+  /*
   if (isOpen) {
     document.querySelector('body').classList.add('overflow-hidden');
     //document.querySelector('main').classList.remove('relative');
@@ -30,6 +34,7 @@ const Layout = ({pageTitle, children}) => {
     document.querySelector('body').classList.remove('overflow-hidden');
     //document.querySelector('main').classList.add('relative');
   }
+  */
 
   const variants = {
     start: {
