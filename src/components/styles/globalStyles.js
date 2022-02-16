@@ -59,11 +59,12 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .container {
-    padding: 0 30px 30px;
+    padding: 2rem;
     margin-top: 110px;
     flex: 1 0 auto;
   }
 
+  // Check this
   .container.relative {
     position: relative;
   }
@@ -97,7 +98,11 @@ const GlobalStyle = createGlobalStyle`
     justify-content: center;
     align-items: center;
     cursor: pointer;
-}
+  }
+
+  .mobile-nav-spacer {
+    flex: 0 1 33%;
+  }
 
 `
 

@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Header from './header';
 import Footer from './footer';
 import GlobalStyle from './styles/globalStyles';
 import { ThemeProvider } from 'styled-components';
@@ -46,7 +45,6 @@ const Layout = ({pageTitle, children}) => {
     end: {
       opacity: 0,
       transition: {
-        delay: 0.3,
         type: "spring",
         stiffness: 75,
         mass: 0.35,
@@ -65,7 +63,7 @@ const Layout = ({pageTitle, children}) => {
         isOpen={isOpen} 
         toggleOpen={toggleOpen} 
         containerRef={containerRef} 
-        height={height} 
+        height={height}
       />
       <motion.main
         key={pageTitle}

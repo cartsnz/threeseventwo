@@ -1,9 +1,9 @@
 import * as React from 'react';
 import  MobileNavItem from './mobileNavItem';
 import MobileNavMenu from './styles/mobileNavMenu';
+import { navigationItems } from '../lib/navigationItems';
 
 /* TODO
- - Move mobileNavLinks array into separate util file
  - Add social links below menu items
  - Tidy up animation (timing)
 */
@@ -17,37 +17,10 @@ const variants = {
   }
 };
 
-const mobileNavLinks = [
-  {
-    title: "Home",
-    route: "/"
-  },
-  {
-    title: "About us",
-    route: "/about"
-  },
-  {
-    title: "Menus",
-    route: "/menu"
-  },
-  {
-    title: "Book",
-    route: "/book"
-  },
-  {
-    title: "Where we are",
-    route: "/location"
-  },
-  {
-    title: "Gift vouchers",
-    route: "/gifts"
-  }
-];
-
 const MobileNavMenuComponent = () => {
   return(
     <MobileNavMenu variants={variants}>
-      {mobileNavLinks.map(link => (
+      {navigationItems.map(link => (
         <MobileNavItem link={link} key={link.title} />
       ))}
     </MobileNavMenu>

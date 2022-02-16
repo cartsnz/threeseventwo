@@ -2,6 +2,7 @@ import * as React from 'react';
 import { motion } from 'framer-motion';
 import { MenuToggle } from './menuToggle';
 import MobileNavMenuComponent from './mobileNavMenu';
+import { theme } from '../lib/theme';
 
 /* TODO:
   - Tidy up animation (timing)
@@ -10,7 +11,7 @@ import MobileNavMenuComponent from './mobileNavMenu';
 const sidebar = {
   open: (height = 1000) => ({
     clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
-    backgroundColor: "#3d5588",
+    backgroundColor: theme.primaryDark,
     transition: {
       type: "spring",
       stiffness: 20,
@@ -19,7 +20,7 @@ const sidebar = {
   }),
   closed: {
     clipPath: "circle(30px at 40px 40px)",
-    backgroundColor: "#FFF",
+    backgroundColor: theme.primaryLight,
     transition: {
       delay: 0.3,
       type: "spring",
@@ -37,7 +38,7 @@ const MobileNav = ({ isOpen, toggleOpen, containerRef, height}) => {
       custom={height}
       ref={containerRef}
       exit="closed"
-      className="medium-up--hide"
+      className="medium-up--hide mobile-nav-spacer"
       >
       <motion.div className='background' variants={sidebar} />
       <MobileNavMenuComponent />

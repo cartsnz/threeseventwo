@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useState } from 'react';
-import MenuBlock from './menuBlock';
+import MenuComponent from './menuComponent';
 import Button from './styles/button';
 import MenuContainer from './styles/menuContainer';
 
@@ -19,7 +19,7 @@ const Menu = () => {
         </Button>
       </div>
       <div className='menu-blocks'>
-        <MenuBlock type={isPrimary ? "primary" : "secondary"} />
+        <MenuComponent type={isPrimary ? "primary" : "secondary"} />
       </div>
     </MenuContainer>
   </>

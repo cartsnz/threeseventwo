@@ -7,7 +7,6 @@ import NavComponent from './nav';
 
  /* TODO 
   - Sort out html structure header
-  - Center logo on mobile header
   - Tidy up scroll animation
 */
 
@@ -16,7 +15,7 @@ const variants = {
   hidden: { opacity: 0, y: -25 },
 }
 
-const HeaderComponent = ({ isOpen, toggleOpen, containerRef, height}) => {
+const HeaderComponent = ({ isOpen, toggleOpen, containerRef, height }) => {
 
   const scrolled = useHeaderScroll();
 
@@ -31,6 +30,7 @@ const HeaderComponent = ({ isOpen, toggleOpen, containerRef, height}) => {
       }}>
       <MobileNav isOpen={isOpen} toggleOpen={toggleOpen} containerRef={containerRef} height={height} />  
       <HeaderLogo route="/" title="Three Seven Two" type="mobile" />
+      <div className='mobile-nav-spacer medium-up--hide'></div>
       <NavComponent />
     </Header>
   )

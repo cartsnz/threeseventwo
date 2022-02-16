@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 const Header = styled(motion.header)`
-  border-bottom: 1px solid ${({theme}) => theme.primaryDark};
   color: ${({theme}) => theme.primaryDark};
   display: flex;
   justify-content: space-around;

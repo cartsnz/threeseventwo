@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { motion } from 'framer-motion';
 import { MenuToggleButton } from './styles/menuToggle';
+import { theme } from '../lib/theme';
 
 const Path = props => (
   <motion.path
@@ -11,11 +12,6 @@ const Path = props => (
     />
 );
 
-/* TODO 
- - Adjust color of button based on if the item is open or not
- - Pass isOpen as a prop into PATH and adjust stroke based on that
-*/
-
 export const MenuToggle =({ toggle }) => {
   return (
   <MenuToggleButton onClick={toggle}>
@@ -24,11 +20,11 @@ export const MenuToggle =({ toggle }) => {
         variants={{
           closed: { 
             d: "M 2 2.5 L 20 2.5",
-            stroke: "#3d5588"
+            stroke: theme.primaryDark
           },
           open: { 
             d: "M 3 16.5 L 17 2.5",
-            stroke: "#FFF"
+            stroke: theme.primaryLight
           }
         }}
       />
@@ -37,11 +33,11 @@ export const MenuToggle =({ toggle }) => {
         variants={{
           closed: { 
             opacity: 1,
-            stroke: "#3d5588"
+            stroke: theme.primaryDark
           },
           open: { 
             opacity: 0,
-            stroke: "#FFF"
+            stroke: theme.primaryLight
           }
         }}
         transition={{duration: 0.1}}
@@ -50,11 +46,11 @@ export const MenuToggle =({ toggle }) => {
         variants={{
           closed: { 
             d: "M 2 16.346 L 20 16.346",
-            stroke: "#3d5588"
+            stroke: theme.primaryDark
           },
           open: { 
             d: "M 3 2.5 L 17 16.346",
-            stroke: "#FFF"
+            stroke: theme.primaryLight
           }
         }}
       />

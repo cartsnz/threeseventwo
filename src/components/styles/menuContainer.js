@@ -9,8 +9,9 @@ const MenuContainer = styled.section`
   }
 
   .menu-blocks {
-    display: flex;
-    column-gap: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%);
   }
 `
 
