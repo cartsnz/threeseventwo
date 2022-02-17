@@ -6,7 +6,6 @@ import PlaceholderImage from "../components/placeholderImage"
 const IndexPage = () => {
   return (
     <Layout pageTitle="Home">
-       <div>This is the index page</div>
        <PlaceholderImage height="500px" width="100%" />
        <br />
        <PlaceholderImage height="500px" width="100%" />

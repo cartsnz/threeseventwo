@@ -7,7 +7,6 @@ const MenuPage = () => {
 
   return(
     <Layout pageTitle="Menus">
-      <div>This is the menu page</div>
       <div>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </div>

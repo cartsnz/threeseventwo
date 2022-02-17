@@ -60,10 +60,38 @@ const MenuComponent = ({ type }) => {
                   <span>$0.00</span>  
                 </div>
               </li>
+              <li>
+                <div className='menu-block-item'>
+                  <h4>Menu item name - {type}</h4>
+                  <p>Menu item description - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <span>$0.00</span>  
+                </div>
+              </li>
+              <li>
+                <div className='menu-block-item'>
+                  <h4>Menu item name - {type}</h4>
+                  <p>Menu item description - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <span>$0.00</span>  
+                </div>
+              </li>
             </ul>
           </div>
           <div>
             <ul>
+              <li>
+                <div className='menu-block-item'>
+                  <h4>Menu item name - {type}</h4>
+                  <p>Menu item description - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <span>$0.00</span>  
+                </div>
+              </li>
+              <li>
+                <div className='menu-block-item'>
+                  <h4>Menu item name - {type}</h4>
+                  <p>Menu item description - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <span>$0.00</span>  
+                </div>
+              </li>
               <li>
                 <div className='menu-block-item'>
                   <h4>Menu item name - {type}</h4>

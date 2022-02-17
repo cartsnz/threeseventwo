@@ -7,7 +7,7 @@ import NavComponent from './nav';
 
  /* TODO 
   - Sort out html structure header
-  - Tidy up scroll animation
+  - Tidy up scroll animation - find a way for it not to break within the build process
 */
 
 const variants = {
@@ -15,8 +15,7 @@ const variants = {
   hidden: { opacity: 0, y: -25 },
 }
 
-const HeaderComponent = ({ isOpen, toggleOpen, containerRef, height }) => {
-
+const HeaderComponent = () => {
   // const scrolled = useHeaderScroll();
   const scrolled = false;
 
@@ -25,11 +24,8 @@ const HeaderComponent = ({ isOpen, toggleOpen, containerRef, height }) => {
       initial="visible"
       animate={scrolled ? "hidden" : "visible"}
       variants={variants}
-      transition={{
-        duration: 0.5,
-        ease: "easeInOut"
-      }}>
-      <MobileNav isOpen={isOpen} toggleOpen={toggleOpen} containerRef={containerRef} height={height} />  
+      >
+      <MobileNav />  
       <HeaderLogo route="/" title="Three Seven Two" type="mobile" />
       <div className='mobile-nav-spacer medium-up--hide'></div>
       <NavComponent />

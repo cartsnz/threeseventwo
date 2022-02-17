@@ -3,10 +3,7 @@ import Footer from './footer';
 import GlobalStyle from './styles/globalStyles';
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../lib/theme';
-import { useRef } from 'react';
-import { useLockBodyScroll, useOnClickOutside } from '../lib/hooks';
 import { motion, useCycle } from 'framer-motion';
-import { useDimensions } from '../lib/use-dimensions';
 import HeaderComponent from './header';
 
 // TODO:
@@ -17,10 +14,6 @@ import HeaderComponent from './header';
 // - Sort out fixed/spacing when header is scrolled down
 
 const Layout = ({pageTitle, children}) => {
-
-  const [isOpen, toggleOpen] = useCycle(false, true);
-  const containerRef = useRef(null);
-  const { height } = useDimensions(containerRef);
 
   const variants = {
     start: {
@@ -50,12 +43,7 @@ const Layout = ({pageTitle, children}) => {
     <>
       <GlobalStyle />
       <title>{pageTitle}</title>
-      <HeaderComponent 
-        isOpen={isOpen} 
-        toggleOpen={toggleOpen} 
-        containerRef={containerRef} 
-        height={height}
-      />
+      <HeaderComponent />
       <motion.main
         key={pageTitle}
         initial="end"

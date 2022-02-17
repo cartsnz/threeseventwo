@@ -5,7 +5,6 @@ import PlaceholderImage from '../components/placeholderImage';
 const BookingPage = () => {
   return (
     <Layout pageTitle="Bookings">
-      <p>This is the booking page</p>
       <PlaceholderImage width="100%" height="500px" />
       <br />
       <div style={{"display": "flex", "gridGap": "1rem"}}>
