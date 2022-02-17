@@ -17,7 +17,8 @@ const variants = {
 
 const HeaderComponent = ({ isOpen, toggleOpen, containerRef, height }) => {
 
-  const scrolled = useHeaderScroll();
+  // const scrolled = useHeaderScroll();
+  const scrolled = false;
 
   return (
     <Header
