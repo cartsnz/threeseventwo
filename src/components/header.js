@@ -24,6 +24,7 @@ const HeaderComponent = () => {
       initial="visible"
       animate={scrolled ? "hidden" : "visible"}
       variants={variants}
+      className={scrolled ? "sticky" : "transparent"}
       >
       <MobileNav />  
       <HeaderLogo route="/" title="Three Seven Two" type="mobile" />

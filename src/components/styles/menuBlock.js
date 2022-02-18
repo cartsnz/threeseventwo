@@ -26,11 +26,13 @@ const MenuBlock = styled(motion.div)`
 
   h4 {
     grid-area: name;
+    margin-bottom: 0.25em;
   }
 
   p {
     grid-area: desc;
     font-style: italic;
+    margin-bottom: 1em;
   }
 
   span {

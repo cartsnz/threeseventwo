@@ -6,6 +6,7 @@ const Placeholder = styled.div`
   width: ${props => props.width || '150px'};
   background-color: ${props => props.color || '#ccc'};
   border-radius: 0.5rem;
+  margin: 0 auto;
 `
 
 const PlaceholderImage = ({height, width, color}) => {

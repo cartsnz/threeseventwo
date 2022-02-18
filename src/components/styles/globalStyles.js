@@ -64,11 +64,6 @@ const GlobalStyle = createGlobalStyle`
     flex: 1 0 auto;
   }
 
-  // Check this
-  .container.relative {
-    position: relative;
-  }
-
   .medium-up--hide {
     @media (min-width: ${({theme}) => theme.mobile}) {
       display: none;

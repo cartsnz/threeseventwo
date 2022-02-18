@@ -9,7 +9,7 @@ import PlaceholderImage from './placeholderImage'
 
 const HeaderLogo = ({ title, route, type }) => {
   return (
-    <HeaderLogoStyles className={type == 'mobile' ? 'medium-up--hide' : ''}>
+    <HeaderLogoStyles className={type === 'mobile' ? 'medium-up--hide' : ''}>
       <Link to={route}>
         <PlaceholderImage height='75px' width='150px' color='#3d5588'/>
       </Link>

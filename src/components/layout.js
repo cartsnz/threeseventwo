@@ -5,6 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import { theme } from '../lib/theme';
 import { motion, useCycle } from 'framer-motion';
 import HeaderComponent from './header';
+import { pageHandle } from '../lib/utils';
 
 // TODO:
 // - Work out a way to delay the page transition only on mobile
@@ -50,7 +51,7 @@ const Layout = ({pageTitle, children}) => {
         animate="start"
         exit="end"
         variants={variants}
-        className='container'>
+        className={'container ' + pageHandle(pageTitle)}>
         {children}
       </motion.main>
       <Footer />
