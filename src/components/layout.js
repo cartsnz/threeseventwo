@@ -6,6 +6,7 @@ import { theme } from '../lib/theme';
 import { motion, useCycle } from 'framer-motion';
 import HeaderComponent from './header';
 import { pageHandle } from '../lib/utils';
+import SEO from './seo';
 
 // TODO:
 // - Work out a way to delay the page transition only on mobile
@@ -43,7 +44,7 @@ const Layout = ({pageTitle, children}) => {
     <ThemeProvider theme={theme}>
     <>
       <GlobalStyle />
-      <title>{pageTitle}</title>
+      <SEO title={pageTitle}/>
       <HeaderComponent />
       <motion.main
         key={pageTitle}

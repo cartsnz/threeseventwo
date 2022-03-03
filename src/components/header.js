@@ -11,13 +11,28 @@ import NavComponent from './nav';
 */
 
 const variants = {
-  visible: { opacity: 1, y: 0 },
-  hidden: { opacity: 0, y: -25 },
+  visible: { 
+    opacity: 1, y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      delay: 0.1,
+      ease: "easeIn"
+    }
+  },
+  hidden: { 
+    opacity: 0, y: -25,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      ease: "easeIn"
+    }
+  }
 }
 
 const HeaderComponent = () => {
-  // const scrolled = useHeaderScroll();
-  const scrolled = false;
+  const scrolled = useHeaderScroll();
+  // const scrolled = false;
 
   return (
     <Header

@@ -1,12 +1,13 @@
 import { useEffect, useLayoutEffect, useState } from 'react';
+import { isClient } from './utils';
 
 // Custom hook to handle scroll animation of header
 export const useHeaderScroll = () => {
   const [scrolled, setScrolled] = useState(false);
-  let prevScroll = window.scrollY;
+  let prevScroll = isClient ? window.scrollY : 0;
 
   const handleScroll = () => {
-    const currScroll = window.scrollY;
+    const currScroll = isClient ? window.scrollY : 0;
     const isScrolled = prevScroll < currScroll && currScroll > 25;
     setScrolled(isScrolled);
     prevScroll = currScroll;
@@ -26,7 +27,6 @@ export const useHeaderScroll = () => {
 export const useLockBodyScroll = () => {
   useLayoutEffect(() => {
     const originalStyle = window.getComputedStyle(document.body).overflow;
-    console.log('component mounting');
     document.body.style.overflow = "hidden";
     return () => (document.body.style.overflow = originalStyle);
   }, []);
